@@ -1,0 +1,45 @@
+name: Django CI
+
+on:
+  push:
+    branches: [main, master, develop]
+  pull_request:
+    branches: [main, master, develop]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    strategy:
+      max-parallel: 4
+      matrix:
+        python-version: [3.9, '3.10', 3.11]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r smartbuilding/requirements.txt
+
+      - name: Run Migrations
+        run: |
+          cd smartbuilding
+          python manage.py migrate
+
+      - name: Run Tests
+        run: |
+          cd smartbuilding
+          python manage.py test
+
+      - name: Check for Security Issues
+        run: |
+          cd smartbuilding
+          python manage.py check --deploy
