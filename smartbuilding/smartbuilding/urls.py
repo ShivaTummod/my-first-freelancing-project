@@ -16,11 +16,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.views.generic import RedirectView
 
 # import views from the bot app
 from bot import views as bot_views
 
 urlpatterns = [
+    path('', RedirectView.as_view(pattern_name='login', permanent=False), name='home'),
     path('admin/', admin.site.urls),
     path('signup/', bot_views.signup, name='signup'),
     path('login/', bot_views.login_view, name='login'),

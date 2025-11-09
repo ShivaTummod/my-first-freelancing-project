@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Building Management System</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #667eea;
+        }
+        
+        h1 {
+            color: #667eea;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            color: #666;
+            font-size: 1.2em;
+        }
+        
+        section {
+            margin-bottom: 30px;
+        }
+        
+        h2 {
+            color: #764ba2;
+            margin-bottom: 15px;
+            font-size: 1.8em;
+        }
+        
+        h3 {
+            color: #667eea;
+            margin: 20px 0 10px 0;
+            font-size: 1.3em;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            color: #555;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .feature-card {
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .feature-card h3 {
+            margin-top: 0;
+            font-size: 1.2em;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 10px 10px 10px 0;
+            transition: background 0.3s;
+        }
+        
+        .btn:hover {
+            background: #764ba2;
+        }
+        
+        .btn-secondary {
+            background: #6c757d;
+        }
+        
+        .btn-secondary:hover {
+            background: #5a6268;
+        }
+        
+        code {
+            background: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            color: #e83e8c;
+        }
+        
+        pre {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 15px 0;
+        }
+        
+        pre code {
+            background: none;
+            color: #f8f8f2;
+            padding: 0;
+        }
+        
+        .alert {
+            padding: 15px;
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            border-radius: 4px;
+            margin: 20px 0;
+        }
+        
+        .alert-info {
+            background: #d1ecf1;
+            border-left-color: #0dcaf0;
+        }
+        
+        ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            color: #555;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #e9ecef;
+            color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🏢 Smart Building Management System</h1>
+            <p class="subtitle">A Django-powered facility management platform</p>
+        </header>
+        
+        <section>
+            <div class="alert alert-info">
+                <strong>ℹ️ Note:</strong> This is a landing page for the Smart Building Management System. 
+                This Django application requires a Python server to run and cannot be hosted directly on GitHub Pages.
+            </div>
+        </section>
+        
+        <section>
+            <h2>📋 About</h2>
+            <p>
+                The Smart Building Management System is a comprehensive Django web application designed to 
+                help manage facilities, monitor building systems, and streamline facility operations.
+            </p>
+        </section>
+        
+        <section>
+            <h2>✨ Features</h2>
+            <div class="features">
+                <div class="feature-card">
+                    <h3>🔐 User Authentication</h3>
+                    <p>Secure login and signup functionality with user management</p>
+                </div>
+                <div class="feature-card">
+                    <h3>📊 Dashboard</h3>
+                    <p>Comprehensive dashboard for monitoring facility operations</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🏗️ Facility Management</h3>
+                    <p>Track and manage multiple facilities from a single interface</p>
+                </div>
+                <div class="feature-card">
+                    <h3>📱 Responsive Design</h3>
+                    <p>Works seamlessly across desktop and mobile devices</p>
+                </div>
+            </div>
+        </section>
+        
+        <section>
+            <h2>🚀 Getting Started</h2>
+            
+            <h3>Prerequisites</h3>
+            <ul>
+                <li>Python 3.9 or higher</li>
+                <li>pip (Python package manager)</li>
+                <li>Git</li>
+            </ul>
+            
+            <h3>Local Development Setup</h3>
+            <p>Clone the repository and set up the development environment:</p>
+            <pre><code># Clone the repository
+git clone https://github.com/ShivaTummod/my-first-freelancing-project.git
+cd my-first-freelancing-project
+
+# Create a virtual environment
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+# Install dependencies
+pip install -r smartbuilding/requirements.txt
+
+# Navigate to the Django project
+cd smartbuilding
+
+# Run migrations
+python manage.py migrate
+
+# Create a superuser (optional)
+python manage.py createsuperuser
+
+# Run the development server
+python manage.py runserver</code></pre>
+            
+            <p>Access the application at <code>http://127.0.0.1:8000/</code></p>
+        </section>
+        
+        <section>
+            <h2>🌐 Deployment Options</h2>
+            
+            <div class="alert">
+                <strong>⚠️ Important:</strong> This Django application cannot run on GitHub Pages. 
+                Choose one of the deployment platforms below for production hosting.
+            </div>
+            
+            <h3>Recommended Platforms</h3>
+            <ul>
+                <li><strong>Heroku:</strong> Easy deployment with free tier available</li>
+                <li><strong>AWS EC2:</strong> Scalable cloud hosting with full control</li>
+                <li><strong>DigitalOcean:</strong> Simple cloud hosting with app platform</li>
+                <li><strong>Railway:</strong> Modern platform with automatic deployments</li>
+                <li><strong>Render:</strong> Free tier with automatic deployments from Git</li>
+            </ul>
+            
+            <p>Detailed deployment instructions are available in the <code>DEPLOYMENT.md</code> file in the repository.</p>
+        </section>
+        
+        <section>
+            <h2>📚 Documentation</h2>
+            <ul>
+                <li><a href="DEPLOYMENT.md">Deployment Guide</a> - Comprehensive deployment instructions</li>
+                <li><a href="https://docs.djangoproject.com/">Django Documentation</a> - Official Django docs</li>
+            </ul>
+        </section>
+        
+        <section>
+            <h2>🔗 Quick Links</h2>
+            <a href="https://github.com/ShivaTummod/my-first-freelancing-project" class="btn">
+                📦 View on GitHub
+            </a>
+            <a href="https://github.com/ShivaTummod/my-first-freelancing-project/issues" class="btn btn-secondary">
+                🐛 Report Issues
+            </a>
+        </section>
+        
+        <footer>
+            <p>&copy; 2024 Smart Building Management System. Built with Django.</p>
+        </footer>
+    </div>
+</body>
+</html>
